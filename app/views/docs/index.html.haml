@@ -1,6 +1,11 @@
-- @docs.each do |doc|
-  %h2= link_to doc.title, doc
-  %p= time_ago_in_words(doc.created_at)
-  %p= truncate(doc.content, length:50)
-  
-= link_to "New Doc", new_doc_path
+.container
+  .col-sm-8.col-sm-offset-2
+    .well.well-sm
+      - @docs.each do |doc|
+        %h2= link_to doc.title, doc
+        %p= time_ago_in_words(doc.created_at)
+        %p= truncate(doc.content, length:50)
+
+.container
+  .col-sm-8.col-sm-offset-2  
+    = link_to "New Doc", new_doc_path, class: "btn btn-primary btn-lg"

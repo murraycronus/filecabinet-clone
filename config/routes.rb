@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
+  
+  authenticated :user do
+     root 'docs#index', as: "authenticated_root"
+   end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -10,9 +14,7 @@ Rails.application.routes.draw do
 
    resources :docs
 
-   authenticated :user do
-     root 'docs#index', as: "authenticated_root"
-   end
+   
 
   # Example resource route with sub-resources:
   #   resources :products do
