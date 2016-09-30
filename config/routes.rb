@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
    resources :docs
 
-   
+   resources :users
 
   # Example resource route with sub-resources:
   #   resources :products do
