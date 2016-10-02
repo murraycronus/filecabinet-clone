@@ -1,10 +1,12 @@
 .container
   .col-sm-8.col-sm-offset-2
     .well.well-sm
-      - @docs.each do |doc|
-        %h2= link_to doc.title, doc
-        %p= time_ago_in_words(doc.created_at)
+      - @docs.reverse.each do |doc|
+        %h3= link_to doc.title, doc
         %p= truncate(doc.content, length:50)
+        .label.label-primary
+          = time_ago_in_words(doc.created_at)
+        
 
 .container
   .col-sm-8.col-sm-offset-2  

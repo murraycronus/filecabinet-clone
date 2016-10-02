@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'devise', '~> 4.2'
+gem 'devise-bootstrap-views'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 
